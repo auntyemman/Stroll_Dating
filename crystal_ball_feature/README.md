@@ -161,7 +161,8 @@ Implement test driven development with unit tests, integration tests, and end-to
 2. **Real-Time Fetching**: QOTD and profile data are instantly aavailable for users upon login, with caching for high performance.
 3. **Media**: Question endpoints provide media URLs, allowing easy embeddings of 10-15min looping videos in the UI.
 
-
+# Flow chart
+```text
 [Start]
    |
    +--> [Women Daily Question] 
@@ -191,3 +192,4 @@ Implement test driven development with unit tests, integration tests, and end-to
               +--> [Add New Question]
               +--> [Remove Question]
               +--> [Update Question]
+```
