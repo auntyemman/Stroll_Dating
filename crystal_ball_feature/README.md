@@ -160,3 +160,34 @@ Implement test driven development with unit tests, integration tests, and end-to
 1. **API Data**: All endpoints return dtat in frontend-consumable JSON.
 2. **Real-Time Fetching**: QOTD and profile data are instantly aavailable for users upon login, with caching for high performance.
 3. **Media**: Question endpoints provide media URLs, allowing easy embeddings of 10-15min looping videos in the UI.
+
+
+[Start]
+   |
+   +--> [Women Daily Question] 
+   |          |
+   |          +--> [Select Answer] 
+   |                     |
+   |                     +--> [Store Response]
+   |                             |
+   |                             +--> [Trigger Scoring Algorithm]
+   |                                     |
+   |                                     +--> [Update User Preferences]
+   |                                             |
+   |                                             +--> [Recommend Profiles]
+   |
+   +--> [Men Onboard Questions] 
+   |          |
+   |          +--> [Store Answers] 
+   |                     |
+   |                     +--> [Trigger Scoring Algorithm]
+   |                             |
+   |                             +--> [Update User Preferences]
+   |                                             |
+   |                                             +--> [Daily Profiles]
+   |
+   +--> [Admin Manage Questions] 
+              |
+              +--> [Add New Question]
+              +--> [Remove Question]
+              +--> [Update Question]
