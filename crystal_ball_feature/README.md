@@ -8,15 +8,15 @@
 ## 1. Architecture Design
 
 ### High-Level Architecture
-***Microservices Architecture***: Each functionality (user management, question management, response handling) will be encapsulated in separate microservices.
-***API Gateway***: Acts as a single entry point for all client requests, routing them to appropriate services (e.g., Reverse Proxy with NGINX).
-***Database Layer***: NoSQL database (e.g., MongoDB) for unstructured data like user responses.
-***Message Queue***: Implement a message broker (e.g., RabbitMQ) for asynchronous processing of user interactions.
+1. ***Microservices Architecture***: Each functionality (user management, question management, response handling) will be encapsulated in separate microservices.
+2. ***API Gateway***: Acts as a single entry point for all client requests, routing them to appropriate services (e.g., Reverse Proxy with NGINX).
+3. ***Database Layer***: NoSQL database (e.g., MongoDB) for unstructured data like user responses.
+4. ***Message Queue***: Implement a message broker (e.g., RabbitMQ) for asynchronous processing of user interactions.
 
 ### Deployment Strategy
-***Containerization***: Use Docker to containerize microservices for consistent deployment across environments.
-***Orchestration***: Utilize Kubernetes for managing containerized applications, ensuring scaling and load balancing.
-***CI/CD Pipeline***: Implement Continuous Integration/Continuous Deployment (CI/CD) using tools like GitHub Actions for automated testing and deployment.
+1. ***Containerization***: Use Docker to containerize microservices for consistent deployment across environments.
+2. ***Orchestration***: Utilize Kubernetes for managing containerized applications, ensuring scaling and load balancing.
+3. ***CI/CD Pipeline***: Implement Continuous Integration/Continuous Deployment (CI/CD) using tools like GitHub Actions for automated testing and deployment.
 
 ## Backend Design
 ## Data Models
