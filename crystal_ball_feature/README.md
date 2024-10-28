@@ -21,7 +21,7 @@
 ## 2. Backend Design
 
 ### Data Models
-### 1. User Model
+#### 1. User Model
 ```json
 {
   "userId": "string",
@@ -35,7 +35,7 @@
   "profileType": "string"
 }
 ```
-### 2. Question Model
+#### 2. Question Model
 ```json
 {
   "questionId": "string",
@@ -46,7 +46,7 @@
 }
 ```
 
-### 2. Response Model
+#### 2. Response Model
 ```json
 {
   "responseId": "string",
@@ -56,9 +56,9 @@
   "createdAt": "date"
 }
 ```
-## API Endpoints
-### For Women
+### API Endpoints
 
+### For Women
 #### 1. Get Daily Question
 **Endpoint**: GET /api/daily-question/women
 **Response**:
@@ -120,13 +120,33 @@
 }
 ```
 
+### Deployment Strategy
+#### Automated Deployment Pipeline
+1. Code is pushed to the repository.
+2. CI/CD pipeline triggers automated tests.
+3. Upon successful tests, Docker images are built and pushed to a container registry.
+4. Kubernetes deploys updated containers automatically based on defined configurations.
+
+#### Monitoring and Logging
+Implement monitoring tools (e.g., Prometheus, Grafana) for real-time performance tracking.
+
+### Testing Strategy
+#### Testing Environment
+Create staging environments that mirror production setups to conduct thorough testing before deployment.
+
+#### Automated Testing
+Implement test driven development with unit tests, integration tests, and end-to-end tests using frameworks like Jest or Cypress to ensure reliability across the application.
+
+
 3. ## Scalability Considerations
 ### Scaling
 **Horizontal Scaling**: Add more instances of microservices behind the API gateway as user load increases.
 
 ### Load Balancing
-**Implement load balancers** (e.g., Nginx or AWS ELB) to distribute incoming traffic evenly across service instances.
+**Implement load balancers**: Use Nginx or AWS ELB to distribute incoming traffic evenly across service instances.
 
 ### Caching Layer
 **Response Data** : Use Redis to cache frequently accessed data (e.g., questions, user profiles) to reduce database load.
 **Static Data Access** : Use AWS S3 bucket with Amazon CLoudfront(CDN) to cache static files locally based on the users region.
+
+
