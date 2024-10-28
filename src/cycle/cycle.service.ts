@@ -60,7 +60,7 @@ export class CycleService {
    * Get the current(technical the next one to process for this cycle at the due date) cycle for the region.
    * @param region
    */
-  async getNewCycle(region: string ): Promise<number> {
+  async getNewCycle(region: string): Promise<number> {
     const lastCycle = await this.cycleRepository.findOne({ region });
     return lastCycle ? lastCycle.cycleNumber + 1 : 1;
 
