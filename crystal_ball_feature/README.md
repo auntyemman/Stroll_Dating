@@ -120,6 +120,12 @@
 }
 ```
 
+### Edge Cases
+1. **New Users**: Automatically assign the day's QOTD or the latest onboarding questions.
+2. **Question Pool Updates**: Versioning the updates to the questions for consistency.
+3. **Daily Cron Job Failure**: Handle cron jobs with Bull Queue for its built-in retries.
+4. **Daily Limit**: Implement safeguards to prevent excess profile recommendations to maintain performance
+
 ### Deployment Strategy
 #### Automated Deployment Pipeline
 1. Code is pushed to the repository.
@@ -150,3 +156,7 @@ Implement test driven development with unit tests, integration tests, and end-to
 **Static Data Access** : Use AWS S3 bucket with Amazon CLoudfront(CDN) to cache static files locally based on the users region.
 
 
+4. ## Frontend Integration
+1. **API Data**: All endpoints return dtat in frontend-consumable JSON.
+2. **Real-Time Fetching**: QOTD and profile data are instantly aavailable for users upon login, with caching for high performance.
+3. **Media**: Question endpoints provide media URLs, allowing easy embeddings of 10-15min looping videos in the UI.
