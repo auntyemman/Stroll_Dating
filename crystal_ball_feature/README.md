@@ -25,14 +25,14 @@
 ```json
 {
   "userId": "string",
-  "gender": "string", // "male" or "female"
+  "gender": "string",
   "responses": [
     {
       "questionId": "string",
       "answer": "string"
     }
   ],
-  "profileType": "string" // A, B, IDK
+  "profileType": "string"
 }
 ```
 ### 2. Question Model
@@ -40,7 +40,7 @@
 {
   "questionId": "string",
   "content": "string",
-  "videoUrl": "string", // URL to the looping HD video
+  "videoUrl": "string",
   "createdAt": "date",
   "updatedAt": "date"
 }
@@ -63,7 +63,6 @@
 **Endpoint**: GET /api/daily-question/women
 **Response**:
 ```json
-json
 {
   "questionId": "string",
   "content": "string",
@@ -86,7 +85,6 @@ json
 **Endpoint**: POST /api/onboard/men
 **Request** Body:
 ```json
-json
 {
   "userId": "string",
   "responses": [
