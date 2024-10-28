@@ -20,6 +20,12 @@
 
 ## 2. Backend Design
 
+### Backend Architecture
+1. **Nestjs**: A modular and organised backend framework that scales well for this feature's needs.
+2. **MongoDB**: Flexible document storage for user profiles question pools, and responses.
+3. **Redis and Bull Queue**: For caching and management of background jobs, ensuring efficient handling of high traffic.
+4. **Docker & Kubernetes**: To containerize the application and manage deployemnts at scale.
+
 ### Data Models
 #### 1. User Model
 ```json
@@ -171,9 +177,7 @@ Implement test driven development with unit tests, integration tests, and end-to
    |                     |
    |                     +--> [Store Response]
    |                             |
-   |                             +--> [Trigger Scoring Algorithm]
-   |                                     |
-   |                                     +--> [Update User Preferences]
+   |                             +--> [Update User Preferences]
    |                                             |
    |                                             +--> [Recommend Profiles]
    |
